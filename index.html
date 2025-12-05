@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Time Tracker</h1>
+
+    <!-- Personen overzicht -->
+    <div class="person-list">
+        <div class="person">
+            <strong>Nancy</strong><br>
+            <span id="hoursNancy">0 uur</span>  <!---Yuri-->
+        </div>
+        <div class="person">
+            <strong>Tijs</strong><br>
+            <span id="hoursTijs">0 uur</span> <!--Jelte-->
+        </div>
+        <div class="person">
+            <strong>Nick</strong><br>
+            <span id="hoursNick">0 uur</span> <!--Sven-->
+        </div>
+    </div>
+
+    <!-- Timer -->
+    <div class="timer">
+        <h2>Actieve Tijd</h2>
+        <div id="timerDisplay">00:00:00</div>
+        <div class="timer-buttons">
+            <button id="startBtn">Start</button>
+            <button id="stopBtn">Stop</button>
+        </div>
+    </div>
+
+    <!-- Oudere tijd toevoegen -->
+    <button id="addOldTimeBtn">Oudere tijd toevoegen</button>
+
+    <!-- Loglijst -->
+    <div class="log-list" id="logList">
+        <!-- Logs komen hier -->
+    </div>
+</div>
+
+<!-- Pop-up overlay -->
+<div class="popup-overlay" id="popupOverlay">
+    <div class="popup">
+        <h2>Reden & Personen</h2>
+        <textarea id="reasonInput" placeholder="Voer reden in..."></textarea>
+        <label><input type="checkbox" id="personNancy"> Nancy</label><br>
+        <label><input type="checkbox" id="personTijs"> Tijs</label><br>
+        <label><input type="checkbox" id="personNick"> Nick</label><br>
+        <input type="number" id="hoursInput" placeholder="Uren (voor oudere tijd)" min="0">
+        <input type="number" id="minutesInput" placeholder="Minuten (voor oudere tijd)" min="0">
+        <div style="display:flex; justify-content:space-between;">
+            <button class="saveBtn" id="saveBtn">Opslaan</button>
+            <button class="cancelBtn" id="cancelBtn">Annuleren</button>
+        </div>
+    </div>
+</div>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>

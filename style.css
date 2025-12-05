@@ -1,0 +1,158 @@
+/* ===== Algemene layout ===== */
+body {
+  margin: 0;
+  padding: 0;
+  background: #0e0e0e;
+  font-family: Arial, sans-serif;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+.container {
+  width: 95%;
+  max-width: 650px;
+  margin-top: 40px;
+  text-align: center;
+}
+
+/* ===== Titels ===== */
+h1, h2 {
+  color: white;
+  margin-bottom: 20px;
+}
+
+/* ===== Personen overzicht ===== */
+.person-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.person {
+  background: #1b1b1b;
+  padding: 12px 15px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(255,255,255,0.05);
+  width: 33%;
+}
+
+.person strong {
+  font-size: 18px;
+}
+
+/* ===== Timer blok ===== */
+.timer {
+  background: #1b1b1b;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(255,255,255,0.05);
+  margin-bottom: 25px;
+}
+
+#timerDisplay {
+  font-size: 46px;
+  margin-bottom: 20px;
+}
+
+.timer-buttons button {
+  padding: 12px 20px;
+  font-size: 17px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+#startBtn { background: #2ecc71; }
+#stopBtn  { background: #e74c3c; }
+
+/* ===== Oudere tijd toevoegen ===== */
+#addOldTimeBtn {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 30px;
+  background: #3498db;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+/* ===== Log lijst ===== */
+.log-list {
+  background: #1b1b1b;
+  padding: 25px;
+  border-radius: 12px;
+  max-height: 350px;
+  overflow-y: auto;
+  box-shadow: 0 0 10px rgba(255,255,255,0.05);
+}
+
+.log-entry {
+  background: #111;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+/* ===== Pop-up overlay ===== */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.75);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* ===== Pop-up zelf ===== */
+.popup {
+  background: #1b1b1b;
+  padding: 25px;
+  width: 90%;
+  max-width: 420px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255,255,255,0.15);
+}
+
+.popup input,
+.popup textarea,
+.popup select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: none;
+  background: #111;
+  color: white;
+}
+
+.popup button {
+  width: 48%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.popup .saveBtn { background: #2ecc71; }
+.popup .cancelBtn { background: #e74c3c; }
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: #444;
+  border-radius: 4px;
+}
