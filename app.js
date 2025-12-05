@@ -188,7 +188,7 @@ function updateTotalHours(logs) {
         });
     });
 
-    hoursNancyE1.textContent = formatHoursMinutes(totalMinutes.Nancy);
+    hoursNancyEl.textContent = formatHoursMinutes(totalMinutes.Nancy);
     hoursTijsEl.textContent = formatHoursMinutes(totalMinutes.Tijs);
     hoursNickEl.textContent = formatHoursMinutes(totalMinutes.Nick);
 }
@@ -213,3 +213,4 @@ cancelBtn.addEventListener("click", () => {
         updateTimerDisplay();
     }
 });
+
